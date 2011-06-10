@@ -8,7 +8,8 @@
 
 #import "FirstViewController.h"
 #include "utils.h"
-
+#import "data.h"
+#include "bounds.h"
 @implementation FirstViewController
 @synthesize imageView;
 @synthesize scrollView;
@@ -57,11 +58,31 @@
     [super dealloc];
 }
 
+CGPoint loc_to_map(Location *loc)
+{
+	float lon = loc->lon;
+	
+	float min_lon = g_LAND.lon_min;
+	float max_lon = g_LAND.lon_max;
+	float img_w = g_LAND.px_w;
+	float x = fabs(lon - min_lon)/fabs(max_lon - min_lon) * img_w;
+	
+	float lat = loc->lat;
+	float min_lat = g_LAND.lat_min;
+	float max_lat = g_LAND.lat_max;
+	float img_h = g_LAND.px_h;
+	
+	float y = fabs(lat - min_lat)/fabs(max_lat - min_lat) * img_h;
+
+	return CGPointMake(x, y);
+}
+
 #pragma mark - handler
 - (IBAction) refresh: (id) sender
 {
-	UIImage *img = [[UIImage alloc] initWithContentsOfFile: cfg_imagePath()];
+	NSArray *data = getCurrentData();
 	
+	UIImage *img = [[UIImage alloc] initWithContentsOfFile: cfg_imagePath()];
 	CGRect sz = [imageView frame];
 	sz.size = [img size];
 	[imageView setFrame: sz];
@@ -70,16 +91,22 @@
 	UIGraphicsBeginImageContext([img size]); 
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	UIGraphicsPushContext(context);
-	int lat = [img size].width/2;
-	int lon = [img size].height/2;
-	int radius = 50;
-	
 	[img drawAtPoint:CGPointZero];
 	
-	CGRect leftOval = {lat- radius/2, lon - radius/2, radius, radius};
-	CGContextSetRGBFillColor(context, 1.0, 0.0, 0.0, 0.5);
-	CGContextAddEllipseInRect(context, leftOval);
-	CGContextFillPath(context);
+
+	for (Location *loc in data) {
+		NSLog(@"lat: %i, lon: %i", loc->lat, loc->lon);		
+		CGPoint p = loc_to_map(loc);
+		NSLog(@"x: %f, y: %f", p.x, p.y);
+		
+		int radius = 12;
+		CGRect leftOval = {p.x - radius/2, p.y - radius/2, radius, radius};
+		CGContextSetRGBFillColor(context, 1.0, 0.0, 0.0, 0.3);
+		CGContextAddEllipseInRect(context, leftOval);
+		CGContextFillPath(context);
+
+	}
+	
 	
 	UIGraphicsPopContext();
 	UIImage *outputImage = UIGraphicsGetImageFromCurrentImageContext(); 

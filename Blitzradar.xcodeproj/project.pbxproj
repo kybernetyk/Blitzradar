@@ -23,6 +23,7 @@
 		030BEFFD13A2183F0016562A /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030BEFFB13A2183F0016562A /* SecondView.xib */; };
 		030BF00513A218FF0016562A /* de.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 030BF00413A218FF0016562A /* de.jpg */; };
 		03F45D3C13A22A46009EC5D3 /* TapZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F45D3B13A22A46009EC5D3 /* TapZoomScrollView.m */; };
+		03F45D4813A23C1C009EC5D3 /* data.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F45D4713A23C1C009EC5D3 /* data.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		030BF00413A218FF0016562A /* de.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = de.jpg; sourceTree = "<group>"; };
 		03F45D3A13A22A46009EC5D3 /* TapZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapZoomScrollView.h; sourceTree = "<group>"; };
 		03F45D3B13A22A46009EC5D3 /* TapZoomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapZoomScrollView.m; sourceTree = "<group>"; };
+		03F45D4613A23C1C009EC5D3 /* data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = data.h; sourceTree = "<group>"; };
+		03F45D4713A23C1C009EC5D3 /* data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = data.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 				0303B73C13A21C1200026979 /* utils.m */,
 				03F45D3A13A22A46009EC5D3 /* TapZoomScrollView.h */,
 				03F45D3B13A22A46009EC5D3 /* TapZoomScrollView.m */,
+				03F45D4613A23C1C009EC5D3 /* data.h */,
+				03F45D4713A23C1C009EC5D3 /* data.m */,
 			);
 			path = Blitzradar;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				0303B73813A21A5500026979 /* bounds.c in Sources */,
 				0303B73D13A21C1200026979 /* utils.m in Sources */,
 				03F45D3C13A22A46009EC5D3 /* TapZoomScrollView.m in Sources */,
+				03F45D4813A23C1C009EC5D3 /* data.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
