@@ -60,22 +60,50 @@
 
 CGPoint loc_to_map(Location *loc)
 {
-	float lon = loc->lon;
-	
-	float min_lon = g_LAND.lon_min;
-	float max_lon = g_LAND.lon_max;
-	float img_w = g_LAND.px_w;
-	float x = fabs(lon - min_lon)/fabs(max_lon - min_lon) * img_w;
-	
-	float lat = loc->lat;
-	float min_lat = g_LAND.lat_min;
-	float max_lat = g_LAND.lat_max;
-	float img_h = g_LAND.px_h;
-	
-	float y = fabs(lat - min_lat)/fabs(max_lat - min_lat) * img_h;
+/*		double lon = loc->lon;
 
-	return CGPointMake(x, y);
+	
+		double min_lon = g_LAND.lon_min;
+		double max_lon = g_LAND.lon_max;
+		double img_w = g_LAND.px_w;
+		double x = fabs(lon - min_lon)/fabs(max_lon - min_lon) * img_w;
+	
+		double lat = loc->lat;
+		double min_lat = g_LAND.lat_min;
+		double max_lat = g_LAND.lat_max;
+		double img_h = g_LAND.px_h;
+	
+		
+		double d = max_lat - min_lat;
+	
+		double y = (img_h / d) * (d - (lat - min_lat));
+*/	
+	
+	 double min_lon = g_LAND.lon_min;
+	 double max_lon = g_LAND.lon_max;
+	double lon = ([loc lon] - min_lon);
+	 double deg_dist = fabs(max_lon - min_lon);
+	 double img_w = g_LAND.px_w;
+	 double convf = img_w/deg_dist;
+	 double x = lon * convf;
+	 
+	 
+	 double min_lat = g_LAND.lat_min;
+	 double max_lat = g_LAND.lat_max;
+	 double lat = ([loc lat] - min_lat);
+	 deg_dist = fabs(max_lat - min_lat);
+	 double img_h = g_LAND.px_h;
+	 convf = img_h/deg_dist;
+	 double y = img_h -   lat * convf;
+	 
+	 return CGPointMake(x, y);
+
+	
+	
+	//return CGPointMake(x, y);
 }
+
+
 
 #pragma mark - handler
 - (IBAction) refresh: (id) sender
@@ -91,23 +119,47 @@ CGPoint loc_to_map(Location *loc)
 	UIGraphicsBeginImageContext([img size]); 
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	UIGraphicsPushContext(context);
-	[img drawAtPoint:CGPointZero];
-	
+	{
+		//draw map image
+		[img drawAtPoint:CGPointZero];
 
-	for (Location *loc in data) {
-		NSLog(@"lat: %i, lon: %i", loc->lat, loc->lon);		
-		CGPoint p = loc_to_map(loc);
-		NSLog(@"x: %f, y: %f", p.x, p.y);
-		
-		int radius = 12;
-		CGRect leftOval = {p.x - radius/2, p.y - radius/2, radius, radius};
+		/*//draw "%i Blitze texte"
+		UIGraphicsPushContext(context); 
+		{
+			NSString *s = [NSString stringWithFormat: @"%i Blitze", [data count]];
+
+			CGContextSetLineWidth(context, 6.0 );
+			
+			CGContextSetTextDrawingMode(context, kCGTextStroke);
+			CGContextSetRGBStrokeColor(context, 1.0, 1.0, 1.0, 1.0);
+			[s drawAtPoint: CGPointZero 
+				  withFont: [UIFont fontWithName:@"Helvetica-Bold" size:72.0]
+			 ];
+			
+			CGContextSetRGBFillColor(context, 1.0, 0.0, 0.0, 1.0);
+			CGContextSetTextDrawingMode(context, kCGTextFill);
+			[s drawAtPoint: CGPointZero 
+				  withFont: [UIFont fontWithName:@"Helvetica-Bold" size:72.0]
+			 ];
+			
+		} 
+		UIGraphicsPopContext();
+*/
+		//draw red dots @ blitz location
 		CGContextSetRGBFillColor(context, 1.0, 0.0, 0.0, 0.3);
-		CGContextAddEllipseInRect(context, leftOval);
-		CGContextFillPath(context);
+		for (Location *loc in data) {
+			CGPoint p = loc_to_map(loc);
+			
+			NSLog(@"lat: %f, lon: %f", [loc lat], [loc lon]);
+			NSLog(@"x: %f, y: %f", p.x, p.y);
+			
+			float radius = 12.0;
+			CGRect leftOval = {p.x - radius/2, p.y - radius/2, radius, radius};
+			CGContextAddEllipseInRect(context, leftOval);
+			CGContextFillPath(context);
+		}
 
 	}
-	
-	
 	UIGraphicsPopContext();
 	UIImage *outputImage = UIGraphicsGetImageFromCurrentImageContext(); 
 	UIGraphicsEndImageContext();

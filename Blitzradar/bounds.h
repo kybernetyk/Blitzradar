@@ -8,11 +8,12 @@
 #pragma once
 
 struct bounds_t {
-	int lat_min, lat_max;
-	int lon_min, lon_max;
+	double lat_min, lat_max;
+	double lon_min, lon_max;
 	
-	int px_w, px_h;
+	double px_w, px_h;
 	char img_name[255];
+	char data_file[255];
 };
 
 extern struct bounds_t g_bnds_poland;

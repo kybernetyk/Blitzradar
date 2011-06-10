@@ -9,11 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface Location : NSObject {
-@public
-	int lat;
-	int lon;
+	double lat;
+	double lon;
 }
+
+@property (readwrite, assign) double lat;
+@property (readwrite, assign) double lon;
+
 @end
+
 
 extern NSArray *getCurrentData(void);
 
