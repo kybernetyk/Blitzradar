@@ -17,15 +17,13 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-	NSLog(@"did load");
     [super viewDidLoad];
 	
 	[imageView setImage: [UIImage imageNamed: cfg_imageName()]];
-	NSLog(@"iv: %@", imageView);
-	NSLog(@"in: %@", cfg_imageName());
-	NSLog(@"sv.frame: %@", [NSValue valueWithCGRect: [scrollView frame]]);
 
 	[self refresh: self];
+	
+	[scrollView setZoomScale:scrollView.minimumZoomScale];
 }
 
 
@@ -63,21 +61,12 @@
 - (IBAction) refresh: (id) sender
 {
 	UIImage *img = [[UIImage alloc] initWithContentsOfFile: cfg_imagePath()];
-	NSLog(@"path: %@", cfg_imagePath());
-	NSLog(@"img: %@", img);
-	NSLog(@"img size: %@", [NSValue valueWithCGSize: [img size]]);
-	
 	
 	CGRect sz = [imageView frame];
 	sz.size = [img size];
 	[imageView setFrame: sz];
-//	sz.size.height -= 71;
 	[scrollView setContentSize: sz.size];
 
-	NSLog(@"iv.frame: %@", [NSValue valueWithCGRect: [imageView frame]]);
-	NSLog(@"sv.frame: %@", [NSValue valueWithCGRect: [scrollView frame]]);
-	NSLog(@"sv.csize: %@", [NSValue valueWithCGSize: [scrollView contentSize]]);
-	
 	UIGraphicsBeginImageContext([img size]); 
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	UIGraphicsPushContext(context);
@@ -85,7 +74,6 @@
 	int lon = [img size].height/2;
 	int radius = 50;
 	
-	/* Put any sort of drawing code here */
 	[img drawAtPoint:CGPointZero];
 	
 	CGRect leftOval = {lat- radius/2, lon - radius/2, radius, radius};
@@ -98,6 +86,39 @@
 	UIGraphicsEndImageContext();
 	[img release];
 	[imageView setImage: outputImage];
+
+//	scroll.frame.size.width / image.frame.size.width;
+	[scrollView setMinimumZoomScale: scrollView.frame.size.height / imageView.frame.size.height];
+//	
 }
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+	return [self imageView];
+}
+
+/*- (CGRect)centeredFrameForScrollView:(UIScrollView *)scroll andUIView:(UIView *)rView {
+	CGSize boundsSize = scroll.bounds.size;
+	CGRect frameToCenter = rView.frame;
+	// center horizontally
+	if (frameToCenter.size.width < boundsSize.width) {
+		frameToCenter.origin.x = (boundsSize.width - frameToCenter.size.width) / 2;
+	}
+	else {
+		frameToCenter.origin.x = 0;
+	}
+	// center vertically
+	if (frameToCenter.size.height < boundsSize.height) {
+		frameToCenter.origin.y = (boundsSize.height - frameToCenter.size.height) / 2;
+	}
+	else {
+		frameToCenter.origin.y = 0;
+	}
+	return frameToCenter;
+}
+
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
+	[self imageView].frame = [self centeredFrameForScrollView: [self scrollView] andUIView: [self imageView]];
+}*/
 
 @end
