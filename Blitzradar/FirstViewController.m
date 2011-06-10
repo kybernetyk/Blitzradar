@@ -87,16 +87,18 @@
 	[img release];
 	[imageView setImage: outputImage];
 
-//	scroll.frame.size.width / image.frame.size.width;
-	[scrollView setMinimumZoomScale: scrollView.frame.size.height / imageView.frame.size.height];
-//	
+	if (imageView.frame.size.height >= imageView.frame.size.width)
+		[scrollView setMinimumZoomScale: scrollView.frame.size.height / imageView.frame.size.height];
+	else 
+		[scrollView setMinimumZoomScale: scrollView.frame.size.width / imageView.frame.size.width];
+
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
 	return [self imageView];
 }
 
-/*- (CGRect)centeredFrameForScrollView:(UIScrollView *)scroll andUIView:(UIView *)rView {
+- (CGRect)centeredFrameForScrollView:(UIScrollView *)scroll andUIView:(UIView *)rView {
 	CGSize boundsSize = scroll.bounds.size;
 	CGRect frameToCenter = rView.frame;
 	// center horizontally
@@ -119,6 +121,6 @@
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView {
 	[self imageView].frame = [self centeredFrameForScrollView: [self scrollView] andUIView: [self imageView]];
-}*/
+}
 
 @end
