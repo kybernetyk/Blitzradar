@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0303B73813A21A5500026979 /* bounds.c in Sources */ = {isa = PBXBuildFile; fileRef = 0303B73613A21A5500026979 /* bounds.c */; };
+		0303B73D13A21C1200026979 /* utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0303B73C13A21C1200026979 /* utils.m */; };
+		0303B73F13A21D2700026979 /* pl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0303B73E13A21D2700026979 /* pl.jpg */; };
 		030BEFDE13A2183F0016562A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030BEFDD13A2183F0016562A /* UIKit.framework */; };
 		030BEFE013A2183F0016562A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030BEFDF13A2183F0016562A /* Foundation.framework */; };
 		030BEFE213A2183F0016562A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030BEFE113A2183F0016562A /* CoreGraphics.framework */; };
@@ -18,26 +21,34 @@
 		030BEFF713A2183F0016562A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BEFF613A2183F0016562A /* SecondViewController.m */; };
 		030BEFFA13A2183F0016562A /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030BEFF813A2183F0016562A /* FirstView.xib */; };
 		030BEFFD13A2183F0016562A /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030BEFFB13A2183F0016562A /* SecondView.xib */; };
+		030BF00513A218FF0016562A /* de.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 030BF00413A218FF0016562A /* de.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0303B73613A21A5500026979 /* bounds.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bounds.c; sourceTree = "<group>"; };
+		0303B73713A21A5500026979 /* bounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bounds.h; sourceTree = "<group>"; };
+		0303B73A13A21BC900026979 /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
+		0303B73B13A21C1200026979 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		0303B73C13A21C1200026979 /* utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = utils.m; sourceTree = "<group>"; };
+		0303B73E13A21D2700026979 /* pl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pl.jpg; sourceTree = "<group>"; };
 		030BEFD913A2183F0016562A /* Blitzradar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blitzradar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		030BEFDD13A2183F0016562A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		030BEFDF13A2183F0016562A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		030BEFE113A2183F0016562A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		030BEFE513A2183F0016562A /* Blitzradar-Info.plist */ = {isa = PBXFileReference; path = "Blitzradar-Info.plist"; sourceTree = "<group>"; };
+		030BEFE513A2183F0016562A /* Blitzradar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Blitzradar-Info.plist"; sourceTree = "<group>"; };
 		030BEFE713A2183F0016562A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		030BEFE913A2183F0016562A /* Blitzradar-Prefix.pch */ = {isa = PBXFileReference; path = "Blitzradar-Prefix.pch"; sourceTree = "<group>"; };
+		030BEFE913A2183F0016562A /* Blitzradar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Blitzradar-Prefix.pch"; sourceTree = "<group>"; };
 		030BEFEA13A2183F0016562A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		030BEFEC13A2183F0016562A /* BlitzradarAppDelegate.h */ = {isa = PBXFileReference; path = BlitzradarAppDelegate.h; sourceTree = "<group>"; };
+		030BEFEC13A2183F0016562A /* BlitzradarAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlitzradarAppDelegate.h; sourceTree = "<group>"; };
 		030BEFED13A2183F0016562A /* BlitzradarAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlitzradarAppDelegate.m; sourceTree = "<group>"; };
 		030BEFF013A2183F0016562A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		030BEFF213A2183F0016562A /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		030BEFF213A2183F0016562A /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		030BEFF313A2183F0016562A /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		030BEFF513A2183F0016562A /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		030BEFF513A2183F0016562A /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		030BEFF613A2183F0016562A /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		030BEFF913A2183F0016562A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
 		030BEFFC13A2183F0016562A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
+		030BF00413A218FF0016562A /* de.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = de.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +95,7 @@
 		030BEFE313A2183F0016562A /* Blitzradar */ = {
 			isa = PBXGroup;
 			children = (
+				030BF00313A218F30016562A /* Res */,
 				030BEFEC13A2183F0016562A /* BlitzradarAppDelegate.h */,
 				030BEFED13A2183F0016562A /* BlitzradarAppDelegate.m */,
 				030BEFEF13A2183F0016562A /* MainWindow.xib */,
@@ -94,6 +106,11 @@
 				030BEFF813A2183F0016562A /* FirstView.xib */,
 				030BEFFB13A2183F0016562A /* SecondView.xib */,
 				030BEFE413A2183F0016562A /* Supporting Files */,
+				0303B73613A21A5500026979 /* bounds.c */,
+				0303B73713A21A5500026979 /* bounds.h */,
+				0303B73A13A21BC900026979 /* defines.h */,
+				0303B73B13A21C1200026979 /* utils.h */,
+				0303B73C13A21C1200026979 /* utils.m */,
 			);
 			path = Blitzradar;
 			sourceTree = "<group>";
@@ -107,6 +124,15 @@
 				030BEFEA13A2183F0016562A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		030BF00313A218F30016562A /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				0303B73E13A21D2700026979 /* pl.jpg */,
+				030BF00413A218FF0016562A /* de.jpg */,
+			);
+			name = Res;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +186,8 @@
 				030BEFF113A2183F0016562A /* MainWindow.xib in Resources */,
 				030BEFFA13A2183F0016562A /* FirstView.xib in Resources */,
 				030BEFFD13A2183F0016562A /* SecondView.xib in Resources */,
+				030BF00513A218FF0016562A /* de.jpg in Resources */,
+				0303B73F13A21D2700026979 /* pl.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +202,8 @@
 				030BEFEE13A2183F0016562A /* BlitzradarAppDelegate.m in Sources */,
 				030BEFF413A2183F0016562A /* FirstViewController.m in Sources */,
 				030BEFF713A2183F0016562A /* SecondViewController.m in Sources */,
+				0303B73813A21A5500026979 /* bounds.c in Sources */,
+				0303B73D13A21C1200026979 /* utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +324,7 @@
 				030BF00213A2183F0016562A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

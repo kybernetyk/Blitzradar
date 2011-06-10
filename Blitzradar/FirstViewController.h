@@ -13,4 +13,9 @@
 
 }
 
+@property (readwrite, retain) IBOutlet UIImageView *imageView;
+@property (readwrite, retain) IBOutlet UIScrollView *scrollView;
+
+- (IBAction) refresh: (id) sender;
+
 @end
