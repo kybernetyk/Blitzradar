@@ -12,11 +12,13 @@
 @implementation UpdateOperation
 @synthesize delegate;
 @synthesize data;
+@synthesize metadata;
+
 - (void) main 
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	data = getCurrentData();
-	
+	metadata = getMetaData();
 
 	[delegate performSelectorOnMainThread: @selector(updateOperationDidFinish:) withObject: self waitUntilDone: YES];
 

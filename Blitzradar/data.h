@@ -20,4 +20,5 @@
 
 
 extern NSArray *getCurrentData(void);
+extern NSArray *getMetaData(void);
 

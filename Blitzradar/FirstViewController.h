@@ -19,6 +19,7 @@
 @property (readwrite, retain) IBOutlet UIScrollView *scrollView;
 @property (readwrite, retain) IBOutlet UIActivityIndicatorView *activityView;
 @property (readwrite, retain) IBOutlet UIBarButtonItem *statusItem;
+@property (readwrite, retain) IBOutlet UIProgressView *progress;
 
 - (IBAction) refresh: (id) sender;
 

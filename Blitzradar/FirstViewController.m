@@ -16,6 +16,7 @@
 @synthesize scrollView;
 @synthesize activityView;
 @synthesize statusItem;
+@synthesize progress;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
@@ -59,6 +60,9 @@
 		cnt = 0;
 		[self refresh: self];
 	}
+	float prgrs = (1.0/60.0 * (float)cnt);
+	NSLog(@"prgrs: %f", prgrs);
+	[progress setProgress: prgrs];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -87,6 +91,7 @@
 	[self setScrollView: nil];
 	[self setActivityView: nil];
 	[self setStatusItem: nil];
+	[self setProgress: nil];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -124,6 +129,10 @@ CGPoint loc_to_map(Location *loc)
 - (IBAction) refresh: (id) sender
 {
 	cnt = 0; //next automated refresh in 1 min
+	float prgrs = (1.0/60.0 * (float)cnt);
+	NSLog(@"prgrs: %f", prgrs);
+	[progress setProgress: prgrs];
+
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: YES];
 	[[self activityView] startAnimating];
 	[statusItem setTitle: @"Aktualisiere ..."];
@@ -192,18 +201,23 @@ CGPoint loc_to_map(Location *loc)
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
 	[[self activityView] stopAnimating];
 	
-	NSDate *now = [NSDate date];
+//	NSDate *now = [NSDate date];
 //	NSString *dstr = [now desc
 
-	NSDateFormatter *inFormat = [[[NSDateFormatter alloc] init] autorelease];
-	[inFormat setDateFormat:@"HH:mm"];
-	NSString *dstr = [inFormat stringFromDate: now];
-					  
+//	NSDateFormatter *inFormat = [[[NSDateFormatter alloc] init] autorelease];
+//	[inFormat setDateFormat:@"HH:mm"];
+//	NSString *dstr = [inFormat stringFromDate: now];
+
+	NSString *dstr = [[op metadata] objectAtIndex: 1];
 	NSString *s = [NSString stringWithFormat: @"%i Blitze @ %@", [data count], dstr];
 	
 	[statusItem setTitle: s];
 	
 	cnt = 0; //next automated refresh in 1 min
+	float prgrs = (1.0/60.0 * (float)cnt);
+	NSLog(@"prgrs: %f", prgrs);
+	[progress setProgress: prgrs];
+
 
 }
 

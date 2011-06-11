@@ -14,6 +14,7 @@ struct bounds_t {
 	double px_w, px_h;
 	char img_name[255];
 	char data_file[255];
+	char metadata_file[255];
 };
 
 extern struct bounds_t g_bnds_poland;
