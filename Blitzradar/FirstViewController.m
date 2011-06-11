@@ -10,10 +10,12 @@
 #include "utils.h"
 #import "data.h"
 #include "bounds.h"
+#import "UpdateOperation.h"
 @implementation FirstViewController
 @synthesize imageView;
 @synthesize scrollView;
 @synthesize activityView;
+@synthesize statusItem;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
@@ -28,8 +30,7 @@
 	[scrollView setContentSize: sz.size];
 
 	
-	[self refresh: self];
-	
+
 /*	if (imageView.frame.size.height >= imageView.frame.size.width)
 		[scrollView setMinimumZoomScale: scrollView.frame.size.height / imageView.frame.size.height];
 	else 
@@ -38,14 +39,27 @@
 	
 		[scrollView setMinimumZoomScale: scrollView.frame.size.width / imageView.frame.size.width];
 	[scrollView setZoomScale:scrollView.minimumZoomScale];
-	
-	NSTimer *t = [NSTimer scheduledTimerWithTimeInterval: 60.0
+	cnt = 0;
+	t = [NSTimer scheduledTimerWithTimeInterval: 1.0
 												   target: self
-												 selector:@selector(refresh:)
+												 selector:@selector(refreshTimer:)
 												 userInfo: nil
 												  repeats: YES];
+	
+	q = [[NSOperationQueue alloc] init];
+	[q setMaxConcurrentOperationCount: 1];
+	
+		[self refresh: self];
 }
 
+- (void) refreshTimer:(NSTimer*) timer
+{
+	cnt++;
+	if (cnt == 60) {
+		cnt = 0;
+		[self refresh: self];
+	}
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -66,7 +80,13 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-
+	[q release];
+	q = nil;
+	[t invalidate];
+	[self setImageView: nil];
+	[self setScrollView: nil];
+	[self setActivityView: nil];
+	[self setStatusItem: nil];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -103,24 +123,32 @@ CGPoint loc_to_map(Location *loc)
 #pragma mark - handler
 - (IBAction) refresh: (id) sender
 {
+	cnt = 0; //next automated refresh in 1 min
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: YES];
 	[[self activityView] startAnimating];
-	NSArray *data = getCurrentData();
-	
-	UIImage *img = [[UIImage alloc] initWithContentsOfFile: cfg_imagePath()];
+	[statusItem setTitle: @"Aktualisiere ..."];
+	UpdateOperation *op = [[[UpdateOperation alloc] init] autorelease];
+	[op setDelegate: self];
+	[q addOperation: op];
+}
 
+- (void)updateOperationDidFinish: (UpdateOperation *) op
+{
+	NSArray *data = [op data];
+	UIImage *img = [[UIImage alloc] initWithContentsOfFile: cfg_imagePath()];
+	
 	UIGraphicsBeginImageContext([img size]); 
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	UIGraphicsPushContext(context);
 	{
 		//draw map image
 		[img drawAtPoint:CGPointZero];
-
+#if 0
 		//draw "%i Blitze texte"
 		UIGraphicsPushContext(context); 
 		{
 			NSString *s = [NSString stringWithFormat: @"%i Blitze", [data count]];
-
+			
 			CGContextSetLineWidth(context, 6.0 );
 			
 			CGContextSetTextDrawingMode(context, kCGTextStroke);
@@ -137,7 +165,7 @@ CGPoint loc_to_map(Location *loc)
 			
 		} 
 		UIGraphicsPopContext();
-
+#endif
 		//draw red dots @ blitz location
 		CGContextSetRGBFillColor(context, 1.0, 0.0, 0.0, 0.3);
 		for (Location *loc in data) {
@@ -151,17 +179,32 @@ CGPoint loc_to_map(Location *loc)
 			CGContextAddEllipseInRect(context, leftOval);
 			CGContextFillPath(context);
 		}
-
+		
 	}
 	UIGraphicsPopContext();
 	UIImage *outputImage = UIGraphicsGetImageFromCurrentImageContext(); 
 	UIGraphicsEndImageContext();
 	[img release];
+
+	
+	
 	[imageView setImage: outputImage];
-
-
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
 	[[self activityView] stopAnimating];
+	
+	NSDate *now = [NSDate date];
+//	NSString *dstr = [now desc
+
+	NSDateFormatter *inFormat = [[[NSDateFormatter alloc] init] autorelease];
+	[inFormat setDateFormat:@"HH:mm"];
+	NSString *dstr = [inFormat stringFromDate: now];
+					  
+	NSString *s = [NSString stringWithFormat: @"%i Blitze @ %@", [data count], dstr];
+	
+	[statusItem setTitle: s];
+	
+	cnt = 0; //next automated refresh in 1 min
+
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
