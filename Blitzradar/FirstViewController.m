@@ -30,12 +30,13 @@
 	
 	[self refresh: self];
 	
-	if (imageView.frame.size.height >= imageView.frame.size.width)
+/*	if (imageView.frame.size.height >= imageView.frame.size.width)
 		[scrollView setMinimumZoomScale: scrollView.frame.size.height / imageView.frame.size.height];
 	else 
 		[scrollView setMinimumZoomScale: scrollView.frame.size.width / imageView.frame.size.width];
-
+*/
 	
+		[scrollView setMinimumZoomScale: scrollView.frame.size.width / imageView.frame.size.width];
 	[scrollView setZoomScale:scrollView.minimumZoomScale];
 	
 	NSTimer *t = [NSTimer scheduledTimerWithTimeInterval: 60.0
