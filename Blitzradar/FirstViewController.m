@@ -13,7 +13,7 @@
 @implementation FirstViewController
 @synthesize imageView;
 @synthesize scrollView;
-
+@synthesize activityView;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
@@ -21,10 +21,28 @@
     [super viewDidLoad];
 	
 	[imageView setImage: [UIImage imageNamed: cfg_imageName()]];
+	CGRect sz = [imageView frame];
+	sz.size = [[UIImage imageNamed: cfg_imageName()] size];
 
+	[imageView setFrame: sz];
+	[scrollView setContentSize: sz.size];
+
+	
 	[self refresh: self];
 	
+	if (imageView.frame.size.height >= imageView.frame.size.width)
+		[scrollView setMinimumZoomScale: scrollView.frame.size.height / imageView.frame.size.height];
+	else 
+		[scrollView setMinimumZoomScale: scrollView.frame.size.width / imageView.frame.size.width];
+
+	
 	[scrollView setZoomScale:scrollView.minimumZoomScale];
+	
+	NSTimer *t = [NSTimer scheduledTimerWithTimeInterval: 60.0
+												   target: self
+												 selector:@selector(refresh:)
+												 userInfo: nil
+												  repeats: YES];
 }
 
 
@@ -60,47 +78,23 @@
 
 CGPoint loc_to_map(Location *loc)
 {
-/*		double lon = loc->lon;
-
-	
-		double min_lon = g_LAND.lon_min;
-		double max_lon = g_LAND.lon_max;
-		double img_w = g_LAND.px_w;
-		double x = fabs(lon - min_lon)/fabs(max_lon - min_lon) * img_w;
-	
-		double lat = loc->lat;
-		double min_lat = g_LAND.lat_min;
-		double max_lat = g_LAND.lat_max;
-		double img_h = g_LAND.px_h;
-	
-		
-		double d = max_lat - min_lat;
-	
-		double y = (img_h / d) * (d - (lat - min_lat));
-*/	
-	
-	 double min_lon = g_LAND.lon_min;
-	 double max_lon = g_LAND.lon_max;
+	double min_lon = g_LAND.lon_min;
+	double max_lon = g_LAND.lon_max;
 	double lon = ([loc lon] - min_lon);
-	 double deg_dist = fabs(max_lon - min_lon);
-	 double img_w = g_LAND.px_w;
-	 double convf = img_w/deg_dist;
-	 double x = lon * convf;
-	 
-	 
-	 double min_lat = g_LAND.lat_min;
-	 double max_lat = g_LAND.lat_max;
-	 double lat = ([loc lat] - min_lat);
-	 deg_dist = fabs(max_lat - min_lat);
-	 double img_h = g_LAND.px_h;
-	 convf = img_h/deg_dist;
-	 double y = img_h -   lat * convf;
-	 
-	 return CGPointMake(x, y);
+	double deg_dist = fabs(max_lon - min_lon);
+	double img_w = g_LAND.px_w;
+	double convf = img_w/deg_dist;
+	double x = lon * convf;
 
-	
-	
-	//return CGPointMake(x, y);
+	double min_lat = g_LAND.lat_min;
+	double max_lat = g_LAND.lat_max;
+	double lat = ([loc lat] - min_lat);
+	deg_dist = fabs(max_lat - min_lat);
+	double img_h = g_LAND.px_h;
+	convf = img_h/deg_dist;
+	double y = img_h - lat * convf;
+
+	return CGPointMake(x, y);
 }
 
 
@@ -108,13 +102,11 @@ CGPoint loc_to_map(Location *loc)
 #pragma mark - handler
 - (IBAction) refresh: (id) sender
 {
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: YES];
+	[[self activityView] startAnimating];
 	NSArray *data = getCurrentData();
 	
 	UIImage *img = [[UIImage alloc] initWithContentsOfFile: cfg_imagePath()];
-	CGRect sz = [imageView frame];
-	sz.size = [img size];
-	[imageView setFrame: sz];
-	[scrollView setContentSize: sz.size];
 
 	UIGraphicsBeginImageContext([img size]); 
 	CGContextRef context = UIGraphicsGetCurrentContext();
@@ -123,7 +115,7 @@ CGPoint loc_to_map(Location *loc)
 		//draw map image
 		[img drawAtPoint:CGPointZero];
 
-		/*//draw "%i Blitze texte"
+		//draw "%i Blitze texte"
 		UIGraphicsPushContext(context); 
 		{
 			NSString *s = [NSString stringWithFormat: @"%i Blitze", [data count]];
@@ -144,7 +136,7 @@ CGPoint loc_to_map(Location *loc)
 			
 		} 
 		UIGraphicsPopContext();
-*/
+
 		//draw red dots @ blitz location
 		CGContextSetRGBFillColor(context, 1.0, 0.0, 0.0, 0.3);
 		for (Location *loc in data) {
@@ -166,11 +158,9 @@ CGPoint loc_to_map(Location *loc)
 	[img release];
 	[imageView setImage: outputImage];
 
-	if (imageView.frame.size.height >= imageView.frame.size.width)
-		[scrollView setMinimumZoomScale: scrollView.frame.size.height / imageView.frame.size.height];
-	else 
-		[scrollView setMinimumZoomScale: scrollView.frame.size.width / imageView.frame.size.width];
 
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
+	[[self activityView] stopAnimating];
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {

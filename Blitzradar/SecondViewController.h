@@ -13,4 +13,6 @@
     
 }
 
+- (IBAction) proChanged: (id) sender;
+- (IBAction) sliderChanges: (id) sender;
 @end
