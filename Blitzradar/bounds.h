@@ -13,6 +13,7 @@ struct bounds_t {
 	
 	double px_w, px_h;
 	char img_name[255];
+	char sat_imgname[255];
 	char data_file[255];
 	char metadata_file[255];
 };

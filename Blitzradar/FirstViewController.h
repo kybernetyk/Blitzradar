@@ -22,5 +22,6 @@
 @property (readwrite, retain) IBOutlet UIProgressView *progress;
 
 - (IBAction) refresh: (id) sender;
+- (IBAction) hartgeldFuerDeineMutter: (id) sender;
 
 @end

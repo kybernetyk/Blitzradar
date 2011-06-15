@@ -17,7 +17,8 @@ struct bounds_t g_bnds_poland = {
 	
 	.px_w = 500.0,
 	.px_h = 460.0,
-	.img_name = "pl.jpg",
+	.img_name = "pl.png",
+	.sat_imgname = "pl_sat.png",
 	.data_file = "pl.txt",
 	.metadata_file = "pl_metadata.txt",
 };
@@ -31,7 +32,8 @@ struct bounds_t g_bnds_germany = {
 	
 	.px_w = 480.0,
 	.px_h = 580.0,
-	.img_name = "de.jpg",
+	.img_name = "de_sat.png",
+	.sat_imgname = "de_sat.png",
 	.data_file = "de.txt",
 	.metadata_file = "de_metadata.txt",
 };

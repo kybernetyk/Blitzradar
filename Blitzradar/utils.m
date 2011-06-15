@@ -11,7 +11,14 @@
 
 NSString *cfg_imageName()
 {
-	NSString *ret = [NSString stringWithFormat: @"%s", g_LAND.img_name];
+	NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+	
+	NSString *ret = nil;
+	if ([defs integerForKey: @"imgmode"] == 0)
+		ret = [NSString stringWithFormat: @"%s", g_LAND.img_name];
+	else 
+		ret = [NSString stringWithFormat: @"%s", g_LAND.sat_imgname];
+	
 	return ret;
 }
 
