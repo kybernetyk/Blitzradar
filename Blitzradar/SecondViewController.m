@@ -41,6 +41,7 @@
 	[(UISlider*)[[self view] viewWithTag: 3] setValue: pro_1];
 	[(UISlider*)[[self view] viewWithTag: 4] setValue: pro_2];
 	[(UISlider*)[[self view] viewWithTag: 5] setValue: pro_3];
+	[(UISwitch*)[[self view] viewWithTag: 666] setOn: [defs boolForKey: @"aktu"]];
 }
 - (void)viewWillDisappear:(BOOL)animated
 {
@@ -91,6 +92,13 @@
 			break;
 	}
 	[defs setFloat: val forKey: key];
+	[defs synchronize];
+}
+
+- (IBAction) aktuallisierungsscheissdreckChanged: (id) sender
+{
+	NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+	[defs setBool: [sender isOn] forKey: @"aktu"];
 	[defs synchronize];
 }
 

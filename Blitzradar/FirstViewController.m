@@ -55,6 +55,10 @@
 
 - (void) refreshTimer:(NSTimer*) timer
 {
+	NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+	if (![defs boolForKey: @"aktu"])
+		return;
+	
 	cnt++;
 	if (cnt == 60) {
 		cnt = 0;

@@ -18,8 +18,8 @@ struct bounds_t g_bnds_poland = {
 	.px_w = 500.0,
 	.px_h = 460.0,
 	.img_name = "pl.jpg",
-	.data_file = "aktkartepolengrau.jpg_out.txt",
-	.metadata_file = "aktkartegergrau.jpg_metadata.txt",
+	.data_file = "pl.txt",
+	.metadata_file = "pl_metadata.txt",
 };
 
 struct bounds_t g_bnds_germany = {
@@ -32,6 +32,6 @@ struct bounds_t g_bnds_germany = {
 	.px_w = 480.0,
 	.px_h = 580.0,
 	.img_name = "de.jpg",
-	.data_file = "aktkartegergrau.jpg_out.txt",
-	.metadata_file = "aktkartepolengrau.jpg_metadata.txt",
+	.data_file = "de.txt",
+	.metadata_file = "de_metadata.txt",
 };

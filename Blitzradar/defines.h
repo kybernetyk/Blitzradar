@@ -7,5 +7,5 @@
 //
 #pragma once
 
-#define g_LAND g_bnds_germany
-#define g_DATA_URL @"http://nntp.pl/blids/%s"
+#define g_LAND g_bnds_de
+#define g_DATA_URL @"http://www.fluxforge.com/donnerhall/%s"

@@ -15,4 +15,5 @@
 
 - (IBAction) proChanged: (id) sender;
 - (IBAction) sliderChanges: (id) sender;
+- (IBAction) aktuallisierungsscheissdreckChanged: (id) sender;
 @end
