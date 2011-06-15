@@ -16,8 +16,8 @@
 		030BEFEB13A2183F0016562A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BEFEA13A2183F0016562A /* main.m */; };
 		030BEFEE13A2183F0016562A /* BlitzradarAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BEFED13A2183F0016562A /* BlitzradarAppDelegate.m */; };
 		030BEFF113A2183F0016562A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030BEFEF13A2183F0016562A /* MainWindow.xib */; };
-		030BEFF413A2183F0016562A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BEFF313A2183F0016562A /* FirstViewController.m */; };
-		030BEFF713A2183F0016562A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BEFF613A2183F0016562A /* SecondViewController.m */; };
+		030BEFF413A2183F0016562A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BEFF313A2183F0016562A /* MapViewController.m */; };
+		030BEFF713A2183F0016562A /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BEFF613A2183F0016562A /* SettingsViewController.m */; };
 		030BEFFA13A2183F0016562A /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030BEFF813A2183F0016562A /* FirstView.xib */; };
 		030BEFFD13A2183F0016562A /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030BEFFB13A2183F0016562A /* SecondView.xib */; };
 		0346FF9713A37187008AC262 /* 95-equalizer.png in Resources */ = {isa = PBXBuildFile; fileRef = 0346FF9513A37187008AC262 /* 95-equalizer.png */; };
@@ -28,6 +28,8 @@
 		03D8892913A8F086001BAF74 /* de_sat.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D8892813A8F086001BAF74 /* de_sat.png */; };
 		03D8892D13A8F1CD001BAF74 /* pl_sat.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D8892B13A8F1CD001BAF74 /* pl_sat.png */; };
 		03D8892E13A8F1CD001BAF74 /* pl.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D8892C13A8F1CD001BAF74 /* pl.png */; };
+		03D8893113A8F950001BAF74 /* 103-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D8892F13A8F950001BAF74 /* 103-map.png */; };
+		03D8893213A8F950001BAF74 /* 103-map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D8893013A8F950001BAF74 /* 103-map@2x.png */; };
 		03D9A6BC13A8EF24002B37A5 /* de.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D9A6BB13A8EF24002B37A5 /* de.png */; };
 		03F45D3C13A22A46009EC5D3 /* TapZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F45D3B13A22A46009EC5D3 /* TapZoomScrollView.m */; };
 		03F45D4813A23C1C009EC5D3 /* data.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F45D4713A23C1C009EC5D3 /* data.m */; };
@@ -50,10 +52,10 @@
 		030BEFEC13A2183F0016562A /* BlitzradarAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlitzradarAppDelegate.h; sourceTree = "<group>"; };
 		030BEFED13A2183F0016562A /* BlitzradarAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlitzradarAppDelegate.m; sourceTree = "<group>"; };
 		030BEFF013A2183F0016562A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		030BEFF213A2183F0016562A /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		030BEFF313A2183F0016562A /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		030BEFF513A2183F0016562A /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		030BEFF613A2183F0016562A /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		030BEFF213A2183F0016562A /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		030BEFF313A2183F0016562A /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		030BEFF513A2183F0016562A /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		030BEFF613A2183F0016562A /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		030BEFF913A2183F0016562A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
 		030BEFFC13A2183F0016562A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
 		0346FF9513A37187008AC262 /* 95-equalizer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "95-equalizer.png"; sourceTree = "<group>"; };
@@ -65,6 +67,8 @@
 		03D8892813A8F086001BAF74 /* de_sat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = de_sat.png; sourceTree = "<group>"; };
 		03D8892B13A8F1CD001BAF74 /* pl_sat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pl_sat.png; sourceTree = "<group>"; };
 		03D8892C13A8F1CD001BAF74 /* pl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pl.png; sourceTree = "<group>"; };
+		03D8892F13A8F950001BAF74 /* 103-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map.png"; sourceTree = "<group>"; };
+		03D8893013A8F950001BAF74 /* 103-map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map@2x.png"; sourceTree = "<group>"; };
 		03D9A6BB13A8EF24002B37A5 /* de.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = de.png; sourceTree = "<group>"; };
 		03F45D3A13A22A46009EC5D3 /* TapZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapZoomScrollView.h; sourceTree = "<group>"; };
 		03F45D3B13A22A46009EC5D3 /* TapZoomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapZoomScrollView.m; sourceTree = "<group>"; };
@@ -120,10 +124,10 @@
 				030BEFEC13A2183F0016562A /* BlitzradarAppDelegate.h */,
 				030BEFED13A2183F0016562A /* BlitzradarAppDelegate.m */,
 				030BEFEF13A2183F0016562A /* MainWindow.xib */,
-				030BEFF213A2183F0016562A /* FirstViewController.h */,
-				030BEFF313A2183F0016562A /* FirstViewController.m */,
-				030BEFF513A2183F0016562A /* SecondViewController.h */,
-				030BEFF613A2183F0016562A /* SecondViewController.m */,
+				030BEFF213A2183F0016562A /* MapViewController.h */,
+				030BEFF313A2183F0016562A /* MapViewController.m */,
+				030BEFF513A2183F0016562A /* SettingsViewController.h */,
+				030BEFF613A2183F0016562A /* SettingsViewController.m */,
 				030BEFF813A2183F0016562A /* FirstView.xib */,
 				030BEFFB13A2183F0016562A /* SecondView.xib */,
 				030BEFE413A2183F0016562A /* Supporting Files */,
@@ -156,6 +160,8 @@
 		030BF00313A218F30016562A /* Res */ = {
 			isa = PBXGroup;
 			children = (
+				03D8892F13A8F950001BAF74 /* 103-map.png */,
+				03D8893013A8F950001BAF74 /* 103-map@2x.png */,
 				03D8892B13A8F1CD001BAF74 /* pl_sat.png */,
 				03D8892C13A8F1CD001BAF74 /* pl.png */,
 				03D8892813A8F086001BAF74 /* de_sat.png */,
@@ -227,6 +233,8 @@
 				03D8892913A8F086001BAF74 /* de_sat.png in Resources */,
 				03D8892D13A8F1CD001BAF74 /* pl_sat.png in Resources */,
 				03D8892E13A8F1CD001BAF74 /* pl.png in Resources */,
+				03D8893113A8F950001BAF74 /* 103-map.png in Resources */,
+				03D8893213A8F950001BAF74 /* 103-map@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +247,8 @@
 			files = (
 				030BEFEB13A2183F0016562A /* main.m in Sources */,
 				030BEFEE13A2183F0016562A /* BlitzradarAppDelegate.m in Sources */,
-				030BEFF413A2183F0016562A /* FirstViewController.m in Sources */,
-				030BEFF713A2183F0016562A /* SecondViewController.m in Sources */,
+				030BEFF413A2183F0016562A /* MapViewController.m in Sources */,
+				030BEFF713A2183F0016562A /* SettingsViewController.m in Sources */,
 				0303B73813A21A5500026979 /* bounds.c in Sources */,
 				0303B73D13A21C1200026979 /* utils.m in Sources */,
 				03F45D3C13A22A46009EC5D3 /* TapZoomScrollView.m in Sources */,

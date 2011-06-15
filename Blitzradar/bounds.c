@@ -32,7 +32,7 @@ struct bounds_t g_bnds_germany = {
 	
 	.px_w = 480.0,
 	.px_h = 580.0,
-	.img_name = "de_sat.png",
+	.img_name = "de.png",
 	.sat_imgname = "de_sat.png",
 	.data_file = "de.txt",
 	.metadata_file = "de_metadata.txt",
