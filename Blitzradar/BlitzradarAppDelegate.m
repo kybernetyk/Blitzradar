@@ -7,7 +7,7 @@
 //
 
 #import "BlitzradarAppDelegate.h"
-
+#if 0
 //***************************************************************************************************************//
 //***************************************************************************************************************//
 //***************************************************************************************************************//
@@ -99,7 +99,7 @@ ENDIANESS CheckArchEndianalityV2( void )
 
 
 
-
+#endif
 @implementation BlitzradarAppDelegate
 
 
@@ -114,10 +114,10 @@ ENDIANESS CheckArchEndianalityV2( void )
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+#if 0
 	uint16_t i = mkword(0x7, 0x20);
 	
 	printf("%.4x\n", i);
-	
 	ENDIANESS ARCH = UNHANDLE; // middle-endian, bi-endian and anything else except Big & Little endian is not handled
     int RetCode = 0; //success     
 	
@@ -141,7 +141,8 @@ ENDIANESS CheckArchEndianalityV2( void )
         RetCode = 1; //Un-Handled case, failure
     }
 	
-
+#endif
+	
 	NSDictionary *d = [NSDictionary dictionaryWithObject: [NSNumber numberWithBool: YES] forKey: @"aktu"];
 	NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
 	[defs registerDefaults: d];
