@@ -88,6 +88,7 @@
 		030BEFFC13A2183F0016562A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
 		0318DEE713DC1D390057BD3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0318DEE913DC1D560057BD3E /* de */ = {isa = PBXFileReference; lastKnownFileType = file; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0318DEEA13DC1E750057BD3E /* pl */ = {isa = PBXFileReference; lastKnownFileType = file; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0346FF9513A37187008AC262 /* 95-equalizer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "95-equalizer.png"; sourceTree = "<group>"; };
 		0346FF9613A37187008AC262 /* 95-equalizer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "95-equalizer@2x.png"; sourceTree = "<group>"; };
 		0346FF9A13A371F6008AC262 /* 64-zap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "64-zap.png"; sourceTree = "<group>"; };
@@ -412,6 +413,7 @@
 			children = (
 				0318DEE713DC1D390057BD3E /* en */,
 				0318DEE913DC1D560057BD3E /* de */,
+				0318DEEA13DC1E750057BD3E /* pl */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

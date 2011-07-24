@@ -70,7 +70,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Automatisch aktuallisieren</string>
+						<string key="IBUIText">Automatyczna Aktualizacja</string>
 						<object class="NSFont" key="IBUIFont" id="403918722">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">12</double>
@@ -103,7 +103,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Konfiguracja</string>
+						<string key="IBUIText">Ustawienia</string>
 						<object class="NSFont" key="IBUIFont" id="852615382">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">17</double>
@@ -413,6 +413,7 @@
 						<string key="NSFrame">{{275, 355}, {25, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
