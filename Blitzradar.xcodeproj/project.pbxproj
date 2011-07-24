@@ -94,6 +94,9 @@
 		03745EBC13DC13F700378B38 /* de */ = {isa = PBXFileReference; lastKnownFileType = file; name = de; path = de.lproj/SecondView.xib; sourceTree = "<group>"; };
 		03745EBD13DC13FD00378B38 /* de */ = {isa = PBXFileReference; lastKnownFileType = file; name = de; path = de.lproj/FirstView.xib; sourceTree = "<group>"; };
 		03745EBE13DC148900378B38 /* de */ = {isa = PBXFileReference; lastKnownFileType = file; name = de; path = de.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		03745EBF13DC14D100378B38 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file; name = pl; path = pl.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		03745EC113DC151000378B38 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file; name = pl; path = pl.lproj/FirstView.xib; sourceTree = "<group>"; };
+		03745EC213DC151500378B38 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file; name = pl; path = pl.lproj/SecondView.xib; sourceTree = "<group>"; };
 		03D8892813A8F086001BAF74 /* de_sat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = de_sat.png; sourceTree = "<group>"; };
 		03D8892B13A8F1CD001BAF74 /* pl_sat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pl_sat.png; sourceTree = "<group>"; };
 		03D8892C13A8F1CD001BAF74 /* pl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pl.png; sourceTree = "<group>"; };
@@ -264,6 +267,8 @@
 			knownRegions = (
 				en,
 				de,
+				pl,
+				"pl-PL",
 			);
 			mainGroup = 030BEFCE13A2183F0016562A;
 			productRefGroup = 030BEFDA13A2183F0016562A /* Products */;
@@ -370,6 +375,7 @@
 			children = (
 				030BEFF013A2183F0016562A /* en */,
 				03745EBE13DC148900378B38 /* de */,
+				03745EBF13DC14D100378B38 /* pl */,
 			);
 			name = MainWindow.xib;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 			children = (
 				030BEFF913A2183F0016562A /* en */,
 				03745EBD13DC13FD00378B38 /* de */,
+				03745EC113DC151000378B38 /* pl */,
 			);
 			name = FirstView.xib;
 			sourceTree = "<group>";
@@ -388,6 +395,7 @@
 			children = (
 				030BEFFC13A2183F0016562A /* en */,
 				03745EBC13DC13F700378B38 /* de */,
+				03745EC213DC151500378B38 /* pl */,
 			);
 			name = SecondView.xib;
 			sourceTree = "<group>";
