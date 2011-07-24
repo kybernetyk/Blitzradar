@@ -25,6 +25,32 @@
 		0346FF9C13A371F6008AC262 /* 64-zap.png in Resources */ = {isa = PBXBuildFile; fileRef = 0346FF9A13A371F6008AC262 /* 64-zap.png */; };
 		0346FF9D13A371F6008AC262 /* 64-zap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0346FF9B13A371F6008AC262 /* 64-zap@2x.png */; };
 		0346FFA013A375AD008AC262 /* UpdateOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346FF9F13A375AC008AC262 /* UpdateOperation.m */; };
+		03745E9A13DC101800378B38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BEFEA13A2183F0016562A /* main.m */; };
+		03745E9B13DC101800378B38 /* BlitzradarAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BEFED13A2183F0016562A /* BlitzradarAppDelegate.m */; };
+		03745E9C13DC101800378B38 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BEFF313A2183F0016562A /* MapViewController.m */; };
+		03745E9D13DC101800378B38 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BEFF613A2183F0016562A /* SettingsViewController.m */; };
+		03745E9E13DC101800378B38 /* bounds.c in Sources */ = {isa = PBXBuildFile; fileRef = 0303B73613A21A5500026979 /* bounds.c */; };
+		03745E9F13DC101800378B38 /* utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0303B73C13A21C1200026979 /* utils.m */; };
+		03745EA013DC101800378B38 /* TapZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F45D3B13A22A46009EC5D3 /* TapZoomScrollView.m */; };
+		03745EA113DC101800378B38 /* data.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F45D4713A23C1C009EC5D3 /* data.m */; };
+		03745EA213DC101800378B38 /* UpdateOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346FF9F13A375AC008AC262 /* UpdateOperation.m */; };
+		03745EA413DC101800378B38 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030BEFDD13A2183F0016562A /* UIKit.framework */; };
+		03745EA513DC101800378B38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030BEFDF13A2183F0016562A /* Foundation.framework */; };
+		03745EA613DC101800378B38 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030BEFE113A2183F0016562A /* CoreGraphics.framework */; };
+		03745EA813DC101800378B38 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 030BEFE613A2183F0016562A /* InfoPlist.strings */; };
+		03745EA913DC101800378B38 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030BEFEF13A2183F0016562A /* MainWindow.xib */; };
+		03745EAA13DC101800378B38 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030BEFF813A2183F0016562A /* FirstView.xib */; };
+		03745EAB13DC101800378B38 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030BEFFB13A2183F0016562A /* SecondView.xib */; };
+		03745EAC13DC101800378B38 /* 95-equalizer.png in Resources */ = {isa = PBXBuildFile; fileRef = 0346FF9513A37187008AC262 /* 95-equalizer.png */; };
+		03745EAD13DC101800378B38 /* 95-equalizer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0346FF9613A37187008AC262 /* 95-equalizer@2x.png */; };
+		03745EAE13DC101800378B38 /* 64-zap.png in Resources */ = {isa = PBXBuildFile; fileRef = 0346FF9A13A371F6008AC262 /* 64-zap.png */; };
+		03745EAF13DC101800378B38 /* 64-zap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0346FF9B13A371F6008AC262 /* 64-zap@2x.png */; };
+		03745EB013DC101800378B38 /* de.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D9A6BB13A8EF24002B37A5 /* de.png */; };
+		03745EB113DC101800378B38 /* de_sat.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D8892813A8F086001BAF74 /* de_sat.png */; };
+		03745EB213DC101800378B38 /* pl_sat.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D8892B13A8F1CD001BAF74 /* pl_sat.png */; };
+		03745EB313DC101800378B38 /* pl.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D8892C13A8F1CD001BAF74 /* pl.png */; };
+		03745EB413DC101800378B38 /* 103-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D8892F13A8F950001BAF74 /* 103-map.png */; };
+		03745EB513DC101800378B38 /* 103-map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D8893013A8F950001BAF74 /* 103-map@2x.png */; };
 		03D8892913A8F086001BAF74 /* de_sat.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D8892813A8F086001BAF74 /* de_sat.png */; };
 		03D8892D13A8F1CD001BAF74 /* pl_sat.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D8892B13A8F1CD001BAF74 /* pl_sat.png */; };
 		03D8892E13A8F1CD001BAF74 /* pl.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D8892C13A8F1CD001BAF74 /* pl.png */; };
@@ -64,6 +90,7 @@
 		0346FF9B13A371F6008AC262 /* 64-zap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "64-zap@2x.png"; sourceTree = "<group>"; };
 		0346FF9E13A375AC008AC262 /* UpdateOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateOperation.h; sourceTree = "<group>"; };
 		0346FF9F13A375AC008AC262 /* UpdateOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateOperation.m; sourceTree = "<group>"; };
+		03745EB913DC101800378B38 /* BlitzradarPL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlitzradarPL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D8892813A8F086001BAF74 /* de_sat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = de_sat.png; sourceTree = "<group>"; };
 		03D8892B13A8F1CD001BAF74 /* pl_sat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pl_sat.png; sourceTree = "<group>"; };
 		03D8892C13A8F1CD001BAF74 /* pl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pl.png; sourceTree = "<group>"; };
@@ -87,6 +114,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03745EA313DC101800378B38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03745EA413DC101800378B38 /* UIKit.framework in Frameworks */,
+				03745EA513DC101800378B38 /* Foundation.framework in Frameworks */,
+				03745EA613DC101800378B38 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -103,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				030BEFD913A2183F0016562A /* Blitzradar.app */,
+				03745EB913DC101800378B38 /* BlitzradarPL.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,9 +215,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		030BEFD813A2183F0016562A /* Blitzradar */ = {
+		030BEFD813A2183F0016562A /* Blitzradar DE */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 030BF00013A2183F0016562A /* Build configuration list for PBXNativeTarget "Blitzradar" */;
+			buildConfigurationList = 030BF00013A2183F0016562A /* Build configuration list for PBXNativeTarget "Blitzradar DE" */;
 			buildPhases = (
 				030BEFD513A2183F0016562A /* Sources */,
 				030BEFD613A2183F0016562A /* Frameworks */,
@@ -189,9 +227,26 @@
 			);
 			dependencies = (
 			);
-			name = Blitzradar;
+			name = "Blitzradar DE";
 			productName = Blitzradar;
 			productReference = 030BEFD913A2183F0016562A /* Blitzradar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		03745E9813DC101800378B38 /* Blitzradar PL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03745EB613DC101800378B38 /* Build configuration list for PBXNativeTarget "Blitzradar PL" */;
+			buildPhases = (
+				03745E9913DC101800378B38 /* Sources */,
+				03745EA313DC101800378B38 /* Frameworks */,
+				03745EA713DC101800378B38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Blitzradar PL";
+			productName = Blitzradar;
+			productReference = 03745EB913DC101800378B38 /* BlitzradarPL.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -211,7 +266,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				030BEFD813A2183F0016562A /* Blitzradar */,
+				030BEFD813A2183F0016562A /* Blitzradar DE */,
+				03745E9813DC101800378B38 /* Blitzradar PL */,
 			);
 		};
 /* End PBXProject section */
@@ -238,6 +294,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03745EA713DC101800378B38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03745EA813DC101800378B38 /* InfoPlist.strings in Resources */,
+				03745EA913DC101800378B38 /* MainWindow.xib in Resources */,
+				03745EAA13DC101800378B38 /* FirstView.xib in Resources */,
+				03745EAB13DC101800378B38 /* SecondView.xib in Resources */,
+				03745EAC13DC101800378B38 /* 95-equalizer.png in Resources */,
+				03745EAD13DC101800378B38 /* 95-equalizer@2x.png in Resources */,
+				03745EAE13DC101800378B38 /* 64-zap.png in Resources */,
+				03745EAF13DC101800378B38 /* 64-zap@2x.png in Resources */,
+				03745EB013DC101800378B38 /* de.png in Resources */,
+				03745EB113DC101800378B38 /* de_sat.png in Resources */,
+				03745EB213DC101800378B38 /* pl_sat.png in Resources */,
+				03745EB313DC101800378B38 /* pl.png in Resources */,
+				03745EB413DC101800378B38 /* 103-map.png in Resources */,
+				03745EB513DC101800378B38 /* 103-map@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -254,6 +331,22 @@
 				03F45D3C13A22A46009EC5D3 /* TapZoomScrollView.m in Sources */,
 				03F45D4813A23C1C009EC5D3 /* data.m in Sources */,
 				0346FFA013A375AD008AC262 /* UpdateOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03745E9913DC101800378B38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03745E9A13DC101800378B38 /* main.m in Sources */,
+				03745E9B13DC101800378B38 /* BlitzradarAppDelegate.m in Sources */,
+				03745E9C13DC101800378B38 /* MapViewController.m in Sources */,
+				03745E9D13DC101800378B38 /* SettingsViewController.m in Sources */,
+				03745E9E13DC101800378B38 /* bounds.c in Sources */,
+				03745E9F13DC101800378B38 /* utils.m in Sources */,
+				03745EA013DC101800378B38 /* TapZoomScrollView.m in Sources */,
+				03745EA113DC101800378B38 /* data.m in Sources */,
+				03745EA213DC101800378B38 /* UpdateOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,8 +429,9 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Blitzradar/Blitzradar-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = DEUTSCHLAND;
 				INFOPLIST_FILE = "Blitzradar/Blitzradar-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Blitzradar;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -351,8 +445,45 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Blitzradar/Blitzradar-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = DEUTSCHLAND;
 				INFOPLIST_FILE = "Blitzradar/Blitzradar-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Blitzradar;
+				PROVISIONING_PROFILE = "";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		03745EB713DC101800378B38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blitzradar/Blitzradar-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = POLSKA;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Blitzradar/Blitzradar-Info.plist";
+				PRODUCT_NAME = BlitzradarPL;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		03745EB813DC101800378B38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blitzradar/Blitzradar-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = POLSKA;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Blitzradar/Blitzradar-Info.plist";
+				PRODUCT_NAME = BlitzradarPL;
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -371,11 +502,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		030BF00013A2183F0016562A /* Build configuration list for PBXNativeTarget "Blitzradar" */ = {
+		030BF00013A2183F0016562A /* Build configuration list for PBXNativeTarget "Blitzradar DE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				030BF00113A2183F0016562A /* Debug */,
 				030BF00213A2183F0016562A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03745EB613DC101800378B38 /* Build configuration list for PBXNativeTarget "Blitzradar PL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03745EB713DC101800378B38 /* Debug */,
+				03745EB813DC101800378B38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

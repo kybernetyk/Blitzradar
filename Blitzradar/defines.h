@@ -7,5 +7,13 @@
 //
 #pragma once
 
+#ifdef POLSKA
+#define g_LAND g_bnds_poland
+#endif
+
+
+#ifdef DEUTSCHLAND
 #define g_LAND g_bnds_germany
+#endif
+
 #define g_DATA_URL @"http://www.fluxforge.com/donnerhall/%s"

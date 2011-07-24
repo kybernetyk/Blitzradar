@@ -2,9 +2,9 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1024</int>
-		<string key="IBDocument.SystemVersion">10J869</string>
+		<string key="IBDocument.SystemVersion">10K540</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1305</string>
-		<string key="IBDocument.AppKitVersion">1038.35</string>
+		<string key="IBDocument.AppKitVersion">1038.36</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -146,7 +146,7 @@
 						<int key="IBUITag">1</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Prof Einstellungen</string>
+						<string key="IBUIText">Pro Einstellungen</string>
 						<reference key="IBUIFont" ref="852615382"/>
 						<reference key="IBUITextColor" ref="732629312"/>
 						<reference key="IBUIHighlightedColor" ref="227566964"/>
@@ -252,7 +252,7 @@
 					<object class="IBUILabel" id="93057321">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{62, 179}, {200, 43}}</string>
+						<string key="NSFrame">{{20, 177}, {280, 43}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="292166700"/>
@@ -262,7 +262,7 @@
 						<int key="IBUITag">1</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">(Fehlerhafte Werte koenne die App negativ beeinflussen!)</string>
+						<string key="IBUIText">(Fehlerhafte Werte koenne das Verhalten der App negativ beeinflussen!)</string>
 						<reference key="IBUIFont" ref="403918722"/>
 						<reference key="IBUITextColor" ref="732629312"/>
 						<reference key="IBUIHighlightedColor" ref="227566964"/>
@@ -299,7 +299,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Profi-Modus aktivieren</string>
+						<string key="IBUIText">Pro-Modus aktivieren</string>
 						<reference key="IBUIFont" ref="403918722"/>
 						<reference key="IBUITextColor" ref="732629312"/>
 						<reference key="IBUIHighlightedColor" ref="227566964"/>
@@ -413,7 +413,6 @@
 						<string key="NSFrame">{{275, 355}, {25, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
