@@ -70,7 +70,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Automatic Refresh</string>
+						<string key="IBUIText">Automatisch aktuallisieren</string>
 						<object class="NSFont" key="IBUIFont" id="403918722">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">12</double>
@@ -94,7 +94,7 @@
 					<object class="IBUILabel" id="911431921">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 20}, {280, 22}}</string>
+						<string key="NSFrame">{{20, 20}, {280, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="910408046"/>
@@ -103,7 +103,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Settings</string>
+						<string key="IBUIText">Einstellungen</string>
 						<object class="NSFont" key="IBUIFont" id="852615382">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">17</double>
@@ -146,7 +146,7 @@
 						<int key="IBUITag">1</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Pro Settings</string>
+						<string key="IBUIText">Pro Einstellungen</string>
 						<reference key="IBUIFont" ref="852615382"/>
 						<reference key="IBUITextColor" ref="732629312"/>
 						<reference key="IBUIHighlightedColor" ref="227566964"/>
@@ -171,7 +171,7 @@
 						<int key="IBUITag">1</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Divergence Factor (ß and Ω static!)</string>
+						<string key="IBUIText">Divergenzfaktor (ß und Ω statisch!)</string>
 						<reference key="IBUIFont" ref="403918722"/>
 						<reference key="IBUITextColor" ref="732629312"/>
 						<reference key="IBUIHighlightedColor" ref="227566964"/>
@@ -206,7 +206,7 @@
 						<int key="IBUITag">1</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Induction Field Acceleration Rate (Ω/s)</string>
+						<string key="IBUIText">Induktionsfeldbeschleunigung (Ω/s)</string>
 						<reference key="IBUIFont" ref="403918722"/>
 						<reference key="IBUITextColor" ref="732629312"/>
 						<reference key="IBUIHighlightedColor" ref="227566964"/>
@@ -262,8 +262,7 @@
 						<int key="IBUITag">1</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string type="base64-UTF8" key="IBUIText">KFdhcm5pbmc6IFdyb25nIHZhbHVlcyBtaWdodCBhZmZlY3QgdGhlCmFwcCdzIGJlaGF2aW9yIG5lZ2F0
-aXZlbHkhKQ</string>
+						<string key="IBUIText">(Fehlerhafte Werte koenne das Verhalten der App negativ beeinflussen!)</string>
 						<reference key="IBUIFont" ref="403918722"/>
 						<reference key="IBUITextColor" ref="732629312"/>
 						<reference key="IBUIHighlightedColor" ref="227566964"/>
@@ -300,7 +299,7 @@ aXZlbHkhKQ</string>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Activate Pro-Mode</string>
+						<string key="IBUIText">Pro-Modus aktivieren</string>
 						<reference key="IBUIFont" ref="403918722"/>
 						<reference key="IBUITextColor" ref="732629312"/>
 						<reference key="IBUIHighlightedColor" ref="227566964"/>

@@ -91,6 +91,9 @@
 		0346FF9E13A375AC008AC262 /* UpdateOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateOperation.h; sourceTree = "<group>"; };
 		0346FF9F13A375AC008AC262 /* UpdateOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateOperation.m; sourceTree = "<group>"; };
 		03745EB913DC101800378B38 /* BlitzradarPL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlitzradarPL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03745EBC13DC13F700378B38 /* de */ = {isa = PBXFileReference; lastKnownFileType = file; name = de; path = de.lproj/SecondView.xib; sourceTree = "<group>"; };
+		03745EBD13DC13FD00378B38 /* de */ = {isa = PBXFileReference; lastKnownFileType = file; name = de; path = de.lproj/FirstView.xib; sourceTree = "<group>"; };
+		03745EBE13DC148900378B38 /* de */ = {isa = PBXFileReference; lastKnownFileType = file; name = de; path = de.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		03D8892813A8F086001BAF74 /* de_sat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = de_sat.png; sourceTree = "<group>"; };
 		03D8892B13A8F1CD001BAF74 /* pl_sat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pl_sat.png; sourceTree = "<group>"; };
 		03D8892C13A8F1CD001BAF74 /* pl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pl.png; sourceTree = "<group>"; };
@@ -260,6 +263,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				de,
 			);
 			mainGroup = 030BEFCE13A2183F0016562A;
 			productRefGroup = 030BEFDA13A2183F0016562A /* Products */;
@@ -365,6 +369,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				030BEFF013A2183F0016562A /* en */,
+				03745EBE13DC148900378B38 /* de */,
 			);
 			name = MainWindow.xib;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				030BEFF913A2183F0016562A /* en */,
+				03745EBD13DC13FD00378B38 /* de */,
 			);
 			name = FirstView.xib;
 			sourceTree = "<group>";
@@ -381,6 +387,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				030BEFFC13A2183F0016562A /* en */,
+				03745EBC13DC13F700378B38 /* de */,
 			);
 			name = SecondView.xib;
 			sourceTree = "<group>";
