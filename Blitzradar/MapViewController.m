@@ -137,17 +137,16 @@ CGPoint loc_to_map(Location *loc)
 
 
 
-#pragma mark - handler
+#pragma mark - hanwler
 - (IBAction) refresh: (id) sender
 {
 	cnt = 0; //next automated refresh in 1 min
 	float prgrs = (1.0/60.0 * (float)cnt);
-	NSLog(@"prgrs: %f", prgrs);
 	[progress setProgress: prgrs];
 
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: YES];
 	[[self activityView] startAnimating];
-	[statusItem setTitle: @"Aktualisiere ..."];
+	[statusItem setTitle: NSLocalizedString(@"Refreshing...", nil)];
 	UpdateOperation *op = [[[UpdateOperation alloc] init] autorelease];
 	[op setDelegate: self];
 	[q addOperation: op];
@@ -168,7 +167,7 @@ CGPoint loc_to_map(Location *loc)
 		//draw "%i Blitze texte"
 		UIGraphicsPushContext(context); 
 		{
-			NSString *s = [NSString stringWithFormat: @"%i Blitze", [data count]];
+			NSString *s = [NSString stringWithFormat: @"%i %@", [data count], NSLocalizedString(@"Strikes",nil)];
 			
 			CGContextSetLineWidth(context, 6.0 );
 			
@@ -221,7 +220,7 @@ CGPoint loc_to_map(Location *loc)
 //	NSString *dstr = [inFormat stringFromDate: now];
 
 	NSString *dstr = [[op metadata] objectAtIndex: 1];
-	NSString *s = [NSString stringWithFormat: @"%i Blitze @ %@", [data count], dstr];
+	NSString *s = [NSString stringWithFormat: @"%i %@ @ %@", [data count],NSLocalizedString(@"Strikes",nil), dstr];
 	
 	[statusItem setTitle: s];
 	
