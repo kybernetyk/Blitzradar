@@ -68,7 +68,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Automatyczna Aktualizacja</string>
+						<string key="IBUIText">Automatic Refresh</string>
 						<object class="NSFont" key="IBUIFont" id="403918722">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">12</double>
@@ -100,7 +100,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Ustawienia</string>
+						<string key="IBUIText">Settings</string>
 						<object class="NSFont" key="IBUIFont" id="852615382">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">17</double>
@@ -141,7 +141,7 @@
 						<int key="IBUITag">1</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Pro Ustawienia</string>
+						<string key="IBUIText">Pro Settings</string>
 						<reference key="IBUIFont" ref="852615382"/>
 						<reference key="IBUITextColor" ref="732629312"/>
 						<reference key="IBUIHighlightedColor" ref="227566964"/>
@@ -165,7 +165,7 @@
 						<int key="IBUITag">1</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Faktor Dywergencyjny (ß i Ω staticzne!)</string>
+						<string key="IBUIText">Divergence Factor (ß and Ω static!)</string>
 						<reference key="IBUIFont" ref="403918722"/>
 						<reference key="IBUITextColor" ref="732629312"/>
 						<reference key="IBUIHighlightedColor" ref="227566964"/>
