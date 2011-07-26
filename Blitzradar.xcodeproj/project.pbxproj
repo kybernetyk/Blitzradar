@@ -476,6 +476,7 @@
 				GCC_PREFIX_HEADER = "Blitzradar/Blitzradar-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = DEUTSCHLAND;
 				INFOPLIST_FILE = "Blitzradar/Blitzradar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = Blitzradar;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -486,14 +487,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jaroslaw Szpilewski";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jaroslaw Szpilewski";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Blitzradar/Blitzradar-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = DEUTSCHLAND;
 				INFOPLIST_FILE = "Blitzradar/Blitzradar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = Blitzradar;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "452D2C1F-B6F4-4F00-97DB-E79FDCF86C36";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "452D2C1F-B6F4-4F00-97DB-E79FDCF86C36";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
